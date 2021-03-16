@@ -1,0 +1,24 @@
+{
+	"author": "DesignInk Digital",
+	"description": "DesignInk Digital's internal framework for facilitating WordPress development.",
+	"homepage": "https://designinkdigital.com/",
+	"license": "GPL-3.0",
+	"name": "packagist-testing",
+	"version": "1.1.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/designink-digital/designink-wp-framework"
+	},
+	"bugs": {
+		"url": "https://github.com/designink-digital/designink-wp-framework/issues"
+	},
+	"devDependencies": {
+		"compare-versions": "^3.5.1",
+		"gulp": "^4.0.2",
+		"gulp-json-editor": "^2.5.4",
+		"gulp-prompt": "^1.2.0",
+		"gulp-replace": "^1.0.0",
+		"gulp-util": "^3.0.8",
+		"sprintf-js": "^1.1.2"
+	}
+}

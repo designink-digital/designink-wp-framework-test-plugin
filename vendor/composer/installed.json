@@ -1,0 +1,32 @@
+[
+    {
+        "name": "designink/designink-wp-framework",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/designink-digital/designink-wp-framework.git",
+            "reference": "f92641609132ec5be214afd4e34d04c70a9d0dff"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/designink-digital/designink-wp-framework/zipball/f92641609132ec5be214afd4e34d04c70a9d0dff",
+            "reference": "f92641609132ec5be214afd4e34d04c70a9d0dff",
+            "shasum": ""
+        },
+        "time": "2021-03-16T01:51:55+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Kyle Niemiec",
+                "email": "kyle@designinkdigital.com"
+            }
+        ],
+        "description": "DesignInk Digital's internal framework for facilitating WordPress development."
+    }
+]

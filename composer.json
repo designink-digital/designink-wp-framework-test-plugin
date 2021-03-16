@@ -1,0 +1,5 @@
+{
+    "require": {
+        "designink/designink-wp-framework": "^1.1"
+    }
+}
