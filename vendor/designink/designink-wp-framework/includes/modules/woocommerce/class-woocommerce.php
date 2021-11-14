@@ -22,13 +22,13 @@
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
-namespace DesignInk\WordPress\Framework\v1_1_0;
+namespace DesignInk\WordPress\Framework\v1_1_1;
 
 defined( 'ABSPATH' ) or exit;
 
-use DesignInk\WordPress\Framework\v1_1_0\Module;
+use DesignInk\WordPress\Framework\v1_1_1\Module;
 
-if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\WooCommerce', false ) ) {
+if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_1\WooCommerce', false ) ) {
 
 	/**
 	 * This Module manages the WooCommerce solutions by DesignInk for WordPress.

@@ -22,15 +22,15 @@
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
-namespace DesignInk\WordPress\Framework\v1_1_0;
+namespace DesignInk\WordPress\Framework\v1_1_1;
 
 defined( 'ABSPATH' ) or exit;
 
-use DesignInk\WordPress\Framework\v1_1_0\Framework;
-use DesignInk\WordPress\Framework\v1_1_0\Singleton;
-use DesignInk\WordPress\Framework\v1_1_0\Utility;
+use DesignInk\WordPress\Framework\v1_1_1\Framework;
+use DesignInk\WordPress\Framework\v1_1_1\Singleton;
+use DesignInk\WordPress\Framework\v1_1_1\Utility;
 
-if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\Module', false ) ) {
+if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_1\Module', false ) ) {
 
 	/**
 	 * A class to represent crucial project file system structures and bind their PHP functionalities to WordPress.
@@ -230,7 +230,7 @@ if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\Module', false ) ) {
 		}
 
 		/**
-		 * An alias for DesignInk\WordPress\Framework\v1_1_0\Autoloader::add_autoload_directory()
+		 * An alias for DesignInk\WordPress\Framework\v1_1_1\Autoloader::add_autoload_directory()
 		 * 
 		 * @param string $directory The directory to be searched for potential new classes.
 		 * @return bool Whether or not the directory was successfully added to the autoload array.

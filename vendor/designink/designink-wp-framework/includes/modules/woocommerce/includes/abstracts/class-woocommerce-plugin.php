@@ -22,16 +22,16 @@
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
-namespace DesignInk\WordPress\Framework\v1_1_0;
+namespace DesignInk\WordPress\Framework\v1_1_1;
 
 defined( 'ABSPATH' ) or exit;
 
-use DesignInk\WordPress\Framework\v1_1_0\Admin\Admin_Notice;
-use DesignInk\WordPress\Framework\v1_1_0\Admin\Admin_Notice_Queue;
-use DesignInk\WordPress\Framework\v1_1_0\Plugin;
-use DesignInk\WordPress\Framework\v1_1_0\WooCommerce\Email_Traits;
+use DesignInk\WordPress\Framework\v1_1_1\Admin\Admin_Notice;
+use DesignInk\WordPress\Framework\v1_1_1\Admin\Admin_Notice_Queue;
+use DesignInk\WordPress\Framework\v1_1_1\Plugin;
+use DesignInk\WordPress\Framework\v1_1_1\WooCommerce\Email_Traits;
 
-if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\WooCommerce_Plugin', false ) ) {
+if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_1\WooCommerce_Plugin', false ) ) {
 
 	/**
 	 * A super class of the Plugin that includes WooCommerce-specific functionality.
@@ -49,12 +49,13 @@ if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\WooCommerce_Plugin',
 		 */
 		public function __construct() {
 			array_push( self::$includes, 'emails' );
+			parent::__construct();
 
 			add_action( 'plugins_loaded', function() {
 				if ( $this->woocommerce_check() ) {
-					parent::__construct();
 					add_filter( 'wc_get_template', array( static::class, '_wc_get_template' ), 10, 2 );
 					add_filter( 'wc_get_template_part', array( static::class, '_wc_get_template_part' ), 10, 3 );
+					add_filter( 'woocommerce_locate_core_template', array( static::class, '_woocommerce_locate_core_template' ), 10, 4 );
 					$this->load_emails();
 				}
 			} );
@@ -106,6 +107,28 @@ if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\WooCommerce_Plugin',
 			}
 
 			return $template;
+		}
+
+		/**
+		 * 
+		 * @param string $core_file The full path to the expected file. Return this value.
+		 * @param string $template The relative template path (e.g. 'emails/new-order.php').
+		 * @param string $template_base The path the the templates directory in the WooCommerce plugin folder.
+		 * @param string $email_id The ID of the WooCommerce email looking for the template.
+		 */
+		final public static function _woocommerce_locate_core_template( $core_file, $template, $template_base, $email_id ) {
+			$file = sprintf(
+				'%s/%s/%s',
+				dirname( static::instance()->get_plugin_file() ),
+				static::$template_folder,
+				$template
+			);
+
+			if ( file_exists( $file ) ) {
+				$core_file = $file;
+			}
+
+			return $core_file;
 		}
 
 		/**

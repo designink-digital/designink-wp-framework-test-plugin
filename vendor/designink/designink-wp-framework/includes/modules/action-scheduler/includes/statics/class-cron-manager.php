@@ -22,11 +22,11 @@
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
-namespace DesignInk\WordPress\Framework\v1_1_0\Action_Scheduler;
+namespace DesignInk\WordPress\Framework\v1_1_1\Action_Scheduler;
 
 defined( 'ABSPATH' ) or exit;
 
-if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\Action_Scheduler\Cron_Manager', false ) ) {
+if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_1\Action_Scheduler\Cron_Manager', false ) ) {
 
 	/**
 	 * A class to manage the WP Cron associated with the Action Scheduler and how ofter to check for timers to run.

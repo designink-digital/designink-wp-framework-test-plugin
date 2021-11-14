@@ -18,7 +18,7 @@
  *
  * @package   DesignInk/WordPress/Framework
  * @author    DesignInk Digital
- * @copyright Copyright (c) 2008-2020, DesignInk, LLC
+ * @copyright Copyright (c) 2008-2022, DesignInk, LLC
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
@@ -26,8 +26,8 @@ namespace DFTP\Upgrades;
 
 defined( 'ABSPATH' ) or exit;
 
-use DesignInk\WordPress\Framework\v1_1_0\Utility;
-use DesignInk\WordPress\Framework\v1_1_0\Plugin\Upgrader_Schema;
+use DesignInk\WordPress\Framework\v1_1_1\Utility;
+use DesignInk\WordPress\Framework\v1_1_1\Plugin\Upgrader_Schema;
 
 if ( ! class_exists( 'v1_0_0', false ) ) {
 

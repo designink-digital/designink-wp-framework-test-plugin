@@ -4,7 +4,7 @@
 	"homepage": "https://designinkdigital.com/",
 	"license": "GPL-3.0",
 	"name": "packagist-testing",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/designink-digital/designink-wp-framework"

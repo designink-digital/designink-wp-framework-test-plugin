@@ -22,13 +22,13 @@
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
-namespace DesignInk\WordPress\Framework\v1_1_0;
+namespace DesignInk\WordPress\Framework\v1_1_1;
 
 defined( 'ABSPATH' ) or exit;
 
-use DesignInk\WordPress\Framework\v1_1_0\Plugin;
+use DesignInk\WordPress\Framework\v1_1_1\Plugin;
 
-if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\DesignInk_Framework_Shadow_Plugin', false ) ) {
+if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_1\DesignInk_Framework_Shadow_Plugin', false ) ) {
 
 	/**
 	 * The 'shadow' plugin for the framework that will control the loading of crucial modules.

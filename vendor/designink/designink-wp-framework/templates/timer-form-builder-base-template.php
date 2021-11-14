@@ -24,7 +24,7 @@
 
 defined( 'ABSPATH' ) or exit;
 
-use DesignInk\WordPress\Framework\v1_1_0\Action_Scheduler\Form_Builder;
+use DesignInk\WordPress\Framework\v1_1_1\Action_Scheduler\Form_Builder;
 
 $now = new \DateTime( 'now', new \DateTimeZone( 'GMT' ) );
 

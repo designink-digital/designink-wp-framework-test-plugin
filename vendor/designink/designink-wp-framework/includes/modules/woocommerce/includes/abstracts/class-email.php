@@ -22,13 +22,13 @@
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
-namespace DesignInk\WordPress\Framework\v1_1_0\WooCommerce;
+namespace DesignInk\WordPress\Framework\v1_1_1\WooCommerce;
 
 defined( 'ABSPATH' ) or exit;
 
-use Designink\WordPress\Framework\v1_1_0\Utility;
+use DesignInk\WordPress\Framework\v1_1_1\Utility;
 
-if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\WooCommerce\Email', false ) ) {
+if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_1\WooCommerce\Email', false ) ) {
 
 	/**
 	 * An abstract class for mandating essential parts of the \WC_Email, and implementing email set-up and sending.
@@ -104,7 +104,7 @@ if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\WooCommerce\Email', 
 		}
 
 		/**
-		 * The Woocommerce 'woocommerce_mail_content' action hook. Supply the find/replace functionality.
+		 * The WooCommerce 'woocommerce_mail_content' action hook. Supply the find/replace functionality.
 		 * 
 		 * @param string $content The email text content.
 		 * 
@@ -141,13 +141,13 @@ if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\WooCommerce\Email', 
 		 * @param mixed $object The WC email object.
 		 */
 		final public function trigger( $object ) {
+			$this->object = $object;
 			add_filter( 'woocommerce_mail_content', array( $this, '_woocommerce_mail_content' ) );
 
 			if ( $this->customer_email ) {
 				$this->set_recipient();
 			}
 
-			$this->object = $object;
 			$this->set_placeholders();
 			$this->send( $this->get_recipient(), $this->get_subject(), $this->get_content(), $this->get_headers(), $this->get_attachments() );
 		}

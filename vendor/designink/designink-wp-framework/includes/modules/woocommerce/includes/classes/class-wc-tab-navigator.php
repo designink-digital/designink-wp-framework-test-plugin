@@ -22,14 +22,14 @@
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
-namespace DesignInk\WordPress\Framework\v1_1_0\WooCommerce;
+namespace DesignInk\WordPress\Framework\v1_1_1\WooCommerce;
 
 defined( 'ABSPATH' ) or exit;
 
-use DesignInk\WordPress\Framework\v1_1_0\DesignInk_Framework_Shadow_Plugin;
-use DesignInk\WordPress\Framework\v1_1_0\Utility;
+use DesignInk\WordPress\Framework\v1_1_1\DesignInk_Framework_Shadow_Plugin;
+use DesignInk\WordPress\Framework\v1_1_1\Utility;
 
-if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_0\WooCommerce\WC_Tab_Navigator', false ) ) {
+if ( ! class_exists( '\DesignInk\WordPress\Framework\v1_1_1\WooCommerce\WC_Tab_Navigator', false ) ) {
 
 	/**
 	 * A class to encompass the creation and script handling of wht WooCommerce Tabs UI component.
